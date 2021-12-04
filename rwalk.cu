@@ -129,7 +129,7 @@ void cuda_rwalk(int max_walk_length, int num_walks_per_node, int64_t num_nodes, 
     cudaCheck(cudaMemcpy(dev_timestamp, timestamp_host, sizeof(float) * num_edges, cudaMemcpyHostToDevice));
 
     // start training
-    uint grid_size = (num_nodes - 1) / 128 + 1;
+    uint grid_size = (num_nodes * num_walks_per_node - 1) / 128 + 1;
     dim3 gridDim(grid_size);
     dim3 blockDim(128);
     // ?? header file
