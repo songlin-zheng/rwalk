@@ -137,7 +137,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=randomWalk
+CMAKE_PROJECT_NAME:STATIC=random_walk
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -344,13 +344,13 @@ CUDA_nvToolsExt_LIBRARY:FILEPATH=/sw/arcts/centos7/cuda/11.2.1/lib64/libnvToolsE
 CUDA_rt_LIBRARY:FILEPATH=/usr/lib64/librt.so
 
 //Value Computed by CMake
-randomWalk_BINARY_DIR:STATIC=/home/slzheng/random_walk-main/_build
+random_walk_BINARY_DIR:STATIC=/home/slzheng/random_walk-main/_build
 
 //Value Computed by CMake
-randomWalk_IS_TOP_LEVEL:STATIC=ON
+random_walk_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-randomWalk_SOURCE_DIR:STATIC=/home/slzheng/random_walk-main
+random_walk_SOURCE_DIR:STATIC=/home/slzheng/random_walk-main
 
 
 ########################

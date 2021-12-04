@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/slzheng/random_walk-main/_build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/randomWalk.dir/all
+all: CMakeFiles/random_walk.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/randomWalk.dir/clean
+clean: CMakeFiles/random_walk.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/randomWalk.dir
+# Target rules for target CMakeFiles/random_walk.dir
 
 # All Build rule for target.
-CMakeFiles/randomWalk.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/randomWalk.dir/build.make CMakeFiles/randomWalk.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/randomWalk.dir/build.make CMakeFiles/randomWalk.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/slzheng/random_walk-main/_build/CMakeFiles --progress-num=1,2,3,4 "Built target randomWalk"
-.PHONY : CMakeFiles/randomWalk.dir/all
+CMakeFiles/random_walk.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/random_walk.dir/build.make CMakeFiles/random_walk.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/random_walk.dir/build.make CMakeFiles/random_walk.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/slzheng/random_walk-main/_build/CMakeFiles --progress-num=1,2,3,4 "Built target random_walk"
+.PHONY : CMakeFiles/random_walk.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/randomWalk.dir/rule: cmake_check_build_system
+CMakeFiles/random_walk.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/slzheng/random_walk-main/_build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/randomWalk.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/random_walk.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/slzheng/random_walk-main/_build/CMakeFiles 0
-.PHONY : CMakeFiles/randomWalk.dir/rule
+.PHONY : CMakeFiles/random_walk.dir/rule
 
 # Convenience name for target.
-randomWalk: CMakeFiles/randomWalk.dir/rule
-.PHONY : randomWalk
+random_walk: CMakeFiles/random_walk.dir/rule
+.PHONY : random_walk
 
 # clean rule for target.
-CMakeFiles/randomWalk.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/randomWalk.dir/build.make CMakeFiles/randomWalk.dir/clean
-.PHONY : CMakeFiles/randomWalk.dir/clean
+CMakeFiles/random_walk.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/random_walk.dir/build.make CMakeFiles/random_walk.dir/clean
+.PHONY : CMakeFiles/random_walk.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

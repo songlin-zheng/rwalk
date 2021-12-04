@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named randomWalk
+# Target rules for targets named random_walk
 
 # Build rule for target.
-randomWalk: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 randomWalk
-.PHONY : randomWalk
+random_walk: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 random_walk
+.PHONY : random_walk
 
 # fast build rule for target.
-randomWalk/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/randomWalk.dir/build.make CMakeFiles/randomWalk.dir/build
-.PHONY : randomWalk/fast
+random_walk/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/random_walk.dir/build.make CMakeFiles/random_walk.dir/build
+.PHONY : random_walk/fast
 
 rwalk_kernel.o: rwalk_kernel.cc.o
 .PHONY : rwalk_kernel.o
 
 # target to build an object file
 rwalk_kernel.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/randomWalk.dir/build.make CMakeFiles/randomWalk.dir/rwalk_kernel.cc.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/random_walk.dir/build.make CMakeFiles/random_walk.dir/rwalk_kernel.cc.o
 .PHONY : rwalk_kernel.cc.o
 
 rwalk_kernel.i: rwalk_kernel.cc.i
@@ -142,7 +142,7 @@ rwalk_kernel.i: rwalk_kernel.cc.i
 
 # target to preprocess a source file
 rwalk_kernel.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/randomWalk.dir/build.make CMakeFiles/randomWalk.dir/rwalk_kernel.cc.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/random_walk.dir/build.make CMakeFiles/random_walk.dir/rwalk_kernel.cc.i
 .PHONY : rwalk_kernel.cc.i
 
 rwalk_kernel.s: rwalk_kernel.cc.s
@@ -150,7 +150,7 @@ rwalk_kernel.s: rwalk_kernel.cc.s
 
 # target to generate assembly for a file
 rwalk_kernel.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/randomWalk.dir/build.make CMakeFiles/randomWalk.dir/rwalk_kernel.cc.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/random_walk.dir/build.make CMakeFiles/random_walk.dir/rwalk_kernel.cc.s
 .PHONY : rwalk_kernel.cc.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... randomWalk"
+	@echo "... random_walk"
 	@echo "... rwalk_kernel.o"
 	@echo "... rwalk_kernel.i"
 	@echo "... rwalk_kernel.s"

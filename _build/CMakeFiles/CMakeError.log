@@ -1,23 +1,23 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_761b9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_761b9.dir/build.make CMakeFiles/cmTC_761b9.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_95478/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_95478.dir/build.make CMakeFiles/cmTC_95478.dir/build
 gmake[1]: Entering directory `/home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_761b9.dir/src.cxx.o
-/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_761b9.dir/src.cxx.o -c /home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_761b9
-/sw/arcts/centos7/cmake/3.21.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_761b9.dir/link.txt --verbose=1
-/usr/bin/c++ CMakeFiles/cmTC_761b9.dir/src.cxx.o -o cmTC_761b9 
-CMakeFiles/cmTC_761b9.dir/src.cxx.o: In function `main':
+Building CXX object CMakeFiles/cmTC_95478.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_95478.dir/src.cxx.o -c /home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_95478
+/sw/arcts/centos7/cmake/3.21.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95478.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_95478.dir/src.cxx.o -o cmTC_95478 
+CMakeFiles/cmTC_95478.dir/src.cxx.o: In function `main':
 src.cxx:(.text+0x2d): undefined reference to `pthread_create'
 src.cxx:(.text+0x39): undefined reference to `pthread_detach'
 src.cxx:(.text+0x45): undefined reference to `pthread_cancel'
 src.cxx:(.text+0x56): undefined reference to `pthread_join'
 src.cxx:(.text+0x6a): undefined reference to `pthread_atfork'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [cmTC_761b9] Error 1
+gmake[1]: *** [cmTC_95478] Error 1
 gmake[1]: Leaving directory `/home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp'
-gmake: *** [cmTC_761b9/fast] Error 2
+gmake: *** [cmTC_95478/fast] Error 2
 
 
 Source file was:

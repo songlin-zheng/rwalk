@@ -1,5 +1,5 @@
-#ifndef RWALK_H_
-#define RWALK_H_
+#ifndef RWALKCU_H_
+#define RWALKCU_H_
 
 #include <stdio.h>
 #include <assert.h>
@@ -21,4 +21,4 @@ extern int64_t *random_walk_host;
 
 void cuda_rwalk(int max_walk_length, int num_walks_per_node, int64_t num_nodes, int64_t num_edges, unsigned long long random_number);
 
-#endif /* RWALK_H_ */
+#endif /* RWALKCU_H_ */
