@@ -28,10 +28,11 @@ void __global__ singleRandomWalk(int num_of_node, int num_of_walk, int max_walk_
     float curr_timestamp = .0f;
     rand_walk[i * max_walk_length + 0] = src_node;
 
+    int64_t start = start_idx[src_node];
+    int64_t end = start_idx[src_node + 1];
+
     int walk_cnt;
     for(walk_cnt = 1; walk_cnt < max_walk_length; walk_cnt ++){
-        int64_t start = start_idx[src_node];
-        int64_t end = start_idx[src_node];
 
         // control divergence
         // range should be [start, end)
