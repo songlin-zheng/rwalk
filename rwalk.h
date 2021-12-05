@@ -261,7 +261,7 @@ void GPU_random_walk(
     // pair<> not supported in GPU
     int64_t num_nodes = g.num_nodes();
     int64_t num_edges = g.num_edges();
-    printf("num_nodes : %d ; num_edges : %d； num_walks_per_node: %d; max_walk_length: %d\n", num_nodes, num_edges, num_walks_per_node, max_walk_length);
+    printf("num_nodes : %zu ; num_edges : %zu； num_walks_per_node: %d; max_walk_length: %d\n", num_nodes, num_edges, num_walks_per_node, max_walk_length);
 
     // define the array
     start_idx_host = new int64_t[num_nodes + 1];

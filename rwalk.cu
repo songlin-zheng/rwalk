@@ -21,7 +21,7 @@ int dev_count;
 
 
 // rand_walk -> [num_of_node, num_of_walk, max_walk_length]
-void __global__ singleRandomWalk(int num_of_node, int num_of_walk, int max_walk_length, int64_t* node_idx, float* timestamp, int64_t* start_idx, int64_t* rand_walk, unsigned long long rnumber){
+void __global__ singleRandomWalk(int64_t num_of_node, int64_t num_of_walk, int max_walk_length, int64_t* node_idx, float* timestamp, int64_t* start_idx, int64_t* rand_walk, unsigned long long rnumber){
     // assuming grid = 1
     int64_t i =  (blockDim.x * blockIdx.x) + threadIdx.x;
     if(i >= num_of_node * num_of_walk){
@@ -35,8 +35,7 @@ void __global__ singleRandomWalk(int num_of_node, int num_of_walk, int max_walk_
 
     int64_t start = start_idx[src_node];
     int64_t end = start_idx[src_node + 1];
-    printf("num_of_walk: %d", num_of_walk);
-    // printf("start : %d ; end : %d; src_node: %d; num_of_walk : %d; max_walk_length: % d; i : %d\n", start, end, src_node, num_of_walk, max_walk_length, i);
+    printf("start : %d ; end : %d; src_node: %d; num_of_walk : %d; max_walk_length: %d; i : %d\n", start, end, src_node, num_of_walk, max_walk_length, i);
 
     int walk_cnt;
     for(walk_cnt = 1; walk_cnt < max_walk_length; walk_cnt ++){
@@ -92,7 +91,7 @@ void __global__ singleRandomWalk(int num_of_node, int num_of_walk, int max_walk_
             for(int j = 0; j < idx; j ++){
                 next_cdf += cdf[j] / denom;
                 if(prob >= curr_cdf && prob < next_cdf){
-                    printf("valid node [idx, id]: [%d, %d]", start + j , valid_node[start + j]);
+//                    printf("valid node [idx, id]: [%d, %d]", start + j , valid_node[start + j]);
                     rand_walk[i * max_walk_length + walk_cnt] = valid_node[start + j];
                     src_node = node_idx[start + j];
                     curr_timestamp = timestamp[start + j];
@@ -135,7 +134,7 @@ void cuda_rwalk(int max_walk_length, int num_walks_per_node, int64_t num_nodes, 
     // memcpy
     cudaCheck(cudaMemcpy(dev_start_idx, start_idx_host, sizeof(int64_t) * (num_nodes + 1), cudaMemcpyHostToDevice));
     cudaCheck(cudaMemcpy(dev_node_idx, node_idx_host, sizeof(int64_t) * num_edges, cudaMemcpyHostToDevice));
-cudaCheck(cudaMemcpy(dev_timestamp, timestamp_host, sizeof(float) * num_edges, cudaMemcpyHostToDevice));
+    cudaCheck(cudaMemcpy(dev_timestamp, timestamp_host, sizeof(float) * num_edges, cudaMemcpyHostToDevice));
 
     // cudaGetDeviceCount(&dev_count);
     // for(int i = 0; i < dev_count; i ++){
