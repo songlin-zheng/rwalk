@@ -1,23 +1,23 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_95478/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_95478.dir/build.make CMakeFiles/cmTC_95478.dir/build
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8c24c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8c24c.dir/build.make CMakeFiles/cmTC_8c24c.dir/build
 gmake[1]: Entering directory `/home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_95478.dir/src.cxx.o
-/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_95478.dir/src.cxx.o -c /home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_95478
-/sw/arcts/centos7/cmake/3.21.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95478.dir/link.txt --verbose=1
-/usr/bin/c++ CMakeFiles/cmTC_95478.dir/src.cxx.o -o cmTC_95478 
-CMakeFiles/cmTC_95478.dir/src.cxx.o: In function `main':
+Building CXX object CMakeFiles/cmTC_8c24c.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_8c24c.dir/src.cxx.o -c /home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8c24c
+/sw/arcts/centos7/cmake/3.21.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c24c.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_8c24c.dir/src.cxx.o -o cmTC_8c24c 
+CMakeFiles/cmTC_8c24c.dir/src.cxx.o: In function `main':
 src.cxx:(.text+0x2d): undefined reference to `pthread_create'
 src.cxx:(.text+0x39): undefined reference to `pthread_detach'
 src.cxx:(.text+0x45): undefined reference to `pthread_cancel'
 src.cxx:(.text+0x56): undefined reference to `pthread_join'
 src.cxx:(.text+0x6a): undefined reference to `pthread_atfork'
 collect2: error: ld returned 1 exit status
-gmake[1]: *** [cmTC_95478] Error 1
+gmake[1]: *** [cmTC_8c24c] Error 1
 gmake[1]: Leaving directory `/home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp'
-gmake: *** [cmTC_95478/fast] Error 2
+gmake: *** [cmTC_8c24c/fast] Error 2
 
 
 Source file was:
@@ -40,4 +40,22 @@ int main(void)
 
   return 0;
 }
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_8bc2f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8bc2f.dir/build.make CMakeFiles/cmTC_8bc2f.dir/build
+gmake[1]: Entering directory `/home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8bc2f.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_8bc2f.dir/CheckFunctionExists.cxx.o -c /home/slzheng/random_walk-main/_build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_8bc2f
+/sw/arcts/centos7/cmake/3.21.3/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bc2f.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_8bc2f.dir/CheckFunctionExists.cxx.o -o cmTC_8bc2f  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+gmake[1]: *** [cmTC_8bc2f] Error 1
+gmake[1]: Leaving directory `/home/slzheng/random_walk-main/_build/CMakeFiles/CMakeTmp'
+gmake: *** [cmTC_8bc2f/fast] Error 2
+
+
 

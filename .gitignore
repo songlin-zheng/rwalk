@@ -1,4 +1,3 @@
-slurm*
 _build/*
 .idea/*
 cmake-build-debug/*

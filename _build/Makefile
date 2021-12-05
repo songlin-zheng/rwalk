@@ -129,6 +129,43 @@ random_walk/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/random_walk.dir/build.make CMakeFiles/random_walk.dir/build
 .PHONY : random_walk/fast
 
+#=============================================================================
+# Target rules for targets named cuda_lib
+
+# Build rule for target.
+cuda_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cuda_lib
+.PHONY : cuda_lib
+
+# fast build rule for target.
+cuda_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_lib.dir/build.make CMakeFiles/cuda_lib.dir/build
+.PHONY : cuda_lib/fast
+
+rwalk.o: rwalk.cu.o
+.PHONY : rwalk.o
+
+# target to build an object file
+rwalk.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_lib.dir/build.make CMakeFiles/cuda_lib.dir/rwalk.cu.o
+.PHONY : rwalk.cu.o
+
+rwalk.i: rwalk.cu.i
+.PHONY : rwalk.i
+
+# target to preprocess a source file
+rwalk.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_lib.dir/build.make CMakeFiles/cuda_lib.dir/rwalk.cu.i
+.PHONY : rwalk.cu.i
+
+rwalk.s: rwalk.cu.s
+.PHONY : rwalk.s
+
+# target to generate assembly for a file
+rwalk.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cuda_lib.dir/build.make CMakeFiles/cuda_lib.dir/rwalk.cu.s
+.PHONY : rwalk.cu.s
+
 rwalk_kernel.o: rwalk_kernel.cc.o
 .PHONY : rwalk_kernel.o
 
@@ -161,7 +198,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... cuda_lib"
 	@echo "... random_walk"
+	@echo "... rwalk.o"
+	@echo "... rwalk.i"
+	@echo "... rwalk.s"
 	@echo "... rwalk_kernel.o"
 	@echo "... rwalk_kernel.i"
 	@echo "... rwalk_kernel.s"
